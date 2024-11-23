@@ -1,0 +1,29 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-header bg-warning text-dark">
+      <h2>Edit Employee</h2>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="updateEmployee()">
+        <input type="hidden" [(ngModel)]="employee.id" name="id">
+        
+        <div class="mb-3">
+          <label for="name" class="form-label">Name:</label>
+          <input type="text" id="name" class="form-control" [(ngModel)]="employee.name" name="name" required>
+        </div>
+        
+        <div class="mb-3">
+          <label for="title" class="form-label">Title:</label>
+          <input type="text" id="title" class="form-control" [(ngModel)]="employee.title" name="title" required>
+        </div>
+        
+        <div class="mb-3">
+          <label for="departmentCategory" class="form-label">Department:</label>
+          <input type="text" id="departmentCategory" class="form-control" [(ngModel)]="employee.departmentCategory" name="departmentCategory" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Update</button>
+      </form>
+    </div>
+  </div>
+</div>
